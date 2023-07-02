@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prework</title>
+</head>
+<body>
+    <script>
+        // Diferencia entre let y var. Si se trata de acceder a una variable con let antes de ser declarada obtenemos un ReferenceError en lugar de undefined.
+        console.log(name); // ReferenceError: name is not defined
+        let name = "John Doe";
+
+        // const es muy similar a let, la única diferencia es que una vez asignado un valor a una variable ya no se puede reasignar.
+        let name = 'John Doe';
+        const email = 'john@doe.com';
+        name = 'Jane Doe';
+        email = 'jane@doe.com'; // TypeError: Assignment to constant variable.
+        // const no significa que esta sea inmutable, simplemente no se puede reasignar.
+        const person = {
+            name: 'John Doe'
+        };
+        person.name = 'Jane Doe';
+        person = {}; // TypeError: Assignment to constant variable.
+        //Declarar un objeto con const no significa que no podamos cambiar sus propiedades, lo que no podemos hacer es asignarle un nuevo valor.
+
+        // Como regla general puedes usar const por defecto y usar let solo cuando sea necesario
+    </script>
+</body>
+</html>
